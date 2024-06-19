@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:roll_dice/styled_text.dart';
+
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -15,7 +15,7 @@ class GradientContainer extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [color1, color2], begin: startAlignment, end: endAlignment)),
-      child: const Center(child: StyledText("Hello Bushra")),
+      child:  Center(child:Image.asset('assets/images/dice-4.png')),
     );
   }
 }
