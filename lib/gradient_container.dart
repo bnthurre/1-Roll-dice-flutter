@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
@@ -14,8 +13,27 @@ class GradientContainer extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [color1, color2], begin: startAlignment, end: endAlignment)),
-      child:  Center(child:Image.asset('assets/images/dice-4.png')),
+              colors: [color1, color2],
+              begin: startAlignment,
+              end: endAlignment)),
+      child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'assets/images/dice-4.png',
+            width: 200,
+          ),
+          const SizedBox(height: 20,),
+          TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                // padding: const EdgeInsets.only(top: 20),
+                  foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                  textStyle: const TextStyle(fontSize: 28)),
+              child: const Text("Roll dice"))
+        ],
+      )),
     );
   }
 }
